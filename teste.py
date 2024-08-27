@@ -5,7 +5,8 @@ class DietPlanner:
     def collect_user_data(self):
         # 1. Informações básicas
         self.user_data['idade'] = int(input("Qual é a sua idade? "))
-        self.user_data['sexo'] = input("Qual é o seu sexo biológico? ")
+        print("Qual é o seu sexo biológico? ")
+        self.user_data['sexo'] = input("Escolha uma opção (M, F) ")
         self.user_data['altura'] = float(input("Qual é a sua altura (em cm)? "))
         self.user_data['peso'] = float(input("Qual é o seu peso atual (em kg)? "))
 
@@ -31,35 +32,41 @@ class DietPlanner:
             self.user_data['prazo'] = int(input("Em quantas semanas você espera atingir esse objetivo? "))
 
         # 4. Restrições alimentares
-        self.user_data['alergias'] = input("Você tem alguma alergia alimentar? Se sim, quais? ")
-        self.user_data['dieta_especifica'] = input("Você segue alguma dieta específica (ex: vegetariana, vegana, sem glúten)? Qual? ")
-        self.user_data['restricoes_culturais'] = input("Há algum alimento que você não consome por razões religiosas ou culturais? ")
+        print("\nVocê tem alguma restrição alimentar ? ")
+        print("a) Intolerância a Lactose")
+        print("b) Intolerância a Glúten")
+        print("c) Alergia a Proteina do Leite")
+        print("d) Não Tenho")
+        self.user_data['alergias'] = input("Escolha uma opção (a, b, c ou d)")
+        #self.user_data['dieta_especifica'] = input("Você segue alguma dieta específica (ex: vegetariana, vegana, sem glúten)? Qual? ")
+        
+        #self.user_data['restricoes_culturais'] = input("Há algum alimento que você não consome por razões religiosas ou culturais? ")
 
         # 5. Preferências alimentares
-        self.user_data['alimentos_favoritos'] = input("Quais são seus alimentos favoritos? ")
-        self.user_data['alimentos_indesejados'] = input("Há algum alimento que você absolutamente não gosta ou não comeria? ")
-        self.user_data['preferencia_refeicoes'] = input("Você prefere refeições mais elaboradas ou mais simples e rápidas? ")
+        #self.user_data['alimentos_favoritos'] = input("Quais são seus alimentos favoritos? ")
+        #self.user_data['alimentos_indesejados'] = input("Há algum alimento que você absolutamente não gosta ou não comeria? ")
+        #self.user_data['preferencia_refeicoes'] = input("Você prefere refeições mais elaboradas ou mais simples e rápidas? ")
 
         # 6. Histórico médico
-        self.user_data['condicoes_medicas'] = input("Você tem alguma condição médica que afeta sua dieta (ex: diabetes, hipertensão, colesterol alto)? ")
-        self.user_data['medicamentos'] = input("Você toma algum medicamento que possa afetar seu metabolismo ou necessidades nutricionais? ")
+        #self.user_data['condicoes_medicas'] = input("Você tem alguma condição médica que afeta sua dieta (ex: diabetes, hipertensão, colesterol alto)? ")
+        #self.user_data['medicamentos'] = input("Você toma algum medicamento que possa afetar seu metabolismo ou necessidades nutricionais? ")
 
         # 7. Hábitos alimentares atuais
-        self.user_data['num_refeicoes'] = int(input("Quantas refeições você costuma fazer por dia? "))
-        self.user_data['lanches'] = input("Você costuma fazer lanches entre as refeições principais? (Sim/Não) ")
-        self.user_data['refeicoes_fora'] = input("Com que frequência você come fora de casa? ")
+        #self.user_data['num_refeicoes'] = int(input("Quantas refeições você costuma fazer por dia? "))
+        #self.user_data['lanches'] = input("Você costuma fazer lanches entre as refeições principais? (Sim/Não) ")
+        #self.user_data['refeicoes_fora'] = input("Com que frequência você come fora de casa? ")
 
         # 8. Estilo de vida
-        self.user_data['rotina_diaria'] = input("Descreva brevemente sua rotina diária típica: ")
-        self.user_data['horario_regular'] = input("Você tem um horário regular para as refeições? (Sim/Não) ")
-        self.user_data['pula_refeicoes'] = input("Você costuma pular refeições? Se sim, qual e por quê? ")
+        #self.user_data['rotina_diaria'] = input("Descreva brevemente sua rotina diária típica: ")
+        #self.user_data['horario_regular'] = input("Você tem um horário regular para as refeições? (Sim/Não) ")
+        #self.user_data['pula_refeicoes'] = input("Você costuma pular refeições? Se sim, qual e por quê? ")
 
         # 9. Conhecimento nutricional
-        self.user_data['dieta_anterior'] = input("Você já seguiu alguma dieta antes? Se sim, qual foi sua experiência? ")
-        self.user_data['cozinha'] = input("Você sabe cozinhar? Com que frequência cozinha suas próprias refeições? ")
+        #self.user_data['dieta_anterior'] = input("Você já seguiu alguma dieta antes? Se sim, qual foi sua experiência? ")
+        #self.user_data['cozinha'] = input("Você sabe cozinhar? Com que frequência cozinha suas próprias refeições? ")
 
         # 10. Metas adicionais
-        self.user_data['metas_adicionais'] = input("Além do seu objetivo principal, há algum aspecto específico da sua saúde ou forma física que você gostaria de melhorar? ")
+        #self.user_data['metas_adicionais'] = input("Além do seu objetivo principal, há algum aspecto específico da sua saúde ou forma física que você gostaria de melhorar? ")
 
     def display_user_data(self):
         print("\nDados coletados:")
